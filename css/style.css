@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  margin-top: 5px;
+}
+.wrap {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  border-style: double;
+}
+.form {
+  width: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.form-item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 2;
+  justify-content: space-between;
+  margin-top: 32px;
+  position: relative;
+}
+.form-message {
+  position: absolute;
+  top: 100%;
+  font-size: 13px;
+  font-style: italic;
+}
+.text-input {
+  flex: 1;
+}
+.style-input:focus {
+  outline: none;
+}
+.style-input {
+  flex: 1;
+  padding: 5px;
+  border-radius: 5px;
+}
+.form-item.invalid input {
+  border: solid 2px red;
+  background-color: rgb(247, 228, 228);
+}
+.form-item.invalid span {
+  color: red;
+  margin-top: 5px;
+}
+.img-ctl.main:hover{
+  opacity: 0.6;
+  cursor: pointer;
+}
+.img-avt {
+  margin-top: 30px;
+}
+.btn {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.img-ctl {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+  
+}
+#inputimg {
+  display: none;
+  margin: 0 auto;
+}
+#submit {
+  padding: 10px 50px;
+  width: 130px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+#reset {
+  padding: 10px 50px;
+  width: 130px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.view {
+  display: flex;
+  border: solid 1px;
+  width: 80%;
+  justify-content: space-between;
+
+  margin: 20px auto;
+}
+.text {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+.text p:nth-child(2) {
+  margin-left: 20px;
+}
+.img-ctl.end {
+  margin: 20px 50px;
+}
+/* Cho máy tính */
+@media screen and (min-width: 1024px){ 
+  .style-input {
+    min-width: 390px;
+
+  }
+}
+/* cho mobile */
+@media screen and (max-width:430px){ 
+  .controls-btn {
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+  }
+  .controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #submit ,#reset {
+    
+    margin: 10px 0;
+    padding: 10px 35px;
+    width: 100px;
+  }
+  .view {
+  flex-direction: column;
+  }
+}
+@media screen and (max-width:780px){ 
+  .view {
+    flex-direction: column;
+    }
+}

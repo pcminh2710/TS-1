@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập 1</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="form">
+            <form action="" method="" class="form__style" id="form-1">
+                <div class="form-item ">
+                    <label class="text-input" for="fullname">Full Name:</label>
+                    <input class="style-input " type="text" id="fullname" name="fullName" onblur="handleBlurRequired(event)"
+                        oninput="handleInputRemove(event)">
+                    <span class="form-message"></span>
+                </div>
+                <div class="form-item">
+                    <label class="text-input" for="email">Email:</label>
+                    <input class="style-input" type="text" id="email" name="email" onblur="handleBlurEmail(event) "
+                        oninput="handleInputRemove(event)" value="">
+                    <span class="form-message"> </span>
+                </div>
+                <div class="form-item" id="p">
+                    <label class="text-input" for="phone">Phone:</label>
+                    <input class="style-input" type="text" id="phone" name="phone" onblur="handleBlurPhone(event)"
+                        oninput="handleInputRemove(event)" onkeypress="return isNumberKey(event)" value="">
+                    <span class="form-message"> </span>
+                </div>
+                <div class="form-item">
+                    <label class="text-input" for="birthday">Birthday:</label>
+                    <input class="style-input" type="date" id="birthday" name="birthday" onblur="handleBlurRequired(event)"
+                        oninput="handleInputRemove(event)" value="">
+                    <span class="form-message"> </span>
+                </div>
+                <div class="form-item">
+                    <label class="text-input" for="password">Password:</label>
+                    <input class="style-input" type="password" id="password" name="password" onblur="handleBlurRequired(event)"
+                        oninput="handleInputPass(event)" value="">
+                    <span class="form-message"> </span>
+                </div>
+                <div class="form-item">
+                    <label class="text-input" for="phone">Confirm Password:</label>
+                    <input class="style-input" type="password" id="confirmpassword" name="confirmpassword"
+                    onblur="handleBlurRequired(event)" oninput="handleInputConfirmPass(event)" value="">
+                    <span class="form-message"> </span>
+                </div>
+                <div class="img-avt">
+                    <input type='file' id="inputimg" />
+                    <img class="img-ctl main" onclick="uploadAvt()" id="myimg"
+                        src="https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg" alt="">
+                </div>
+                <div class="btn">
+                    <button id="submit" method="post" name="submit" class="btn btn-primary">Add</button>
+                    <button type="reset" id="reset" method="post" class="btn btn-primary" onclick="reeset()">Reset</button>
+                </div>
+            </form>
+        </div>
+        <div class="view">
+            <div class="view_text">
+                <div class="text">
+                    <p> Full Name:</p>
+                    <p id="text-fullname"></p>
+                </div>
+                <div class="text">
+                    <p> Email:</p>
+                    <p id="text-email"> </p>
+                </div>
+                <div class="text">
+                    <p> Phone:</p>
+                    <p id="text-phone"></p>
+                </div>
+                <div class="text ">
+                    <p> Birthday</p>
+                    <p id="text-birthday"> </p>
+                </div>
+            </div>
+            <div class="view__avt">
+                <img class="img-ctl end" id="avata"
+                    src="https://st.quantrimang.com/photos/image/2017/04/08/anh-dai-dien-FB-200.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
